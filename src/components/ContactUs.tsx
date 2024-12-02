@@ -46,7 +46,7 @@ export default function ContactUs() {
 
           <button
             type='submit'
-            className='px-5 py-2 font-bold text-lg bg-primary text-white rounded-md shadow-sm'
+            className='px-5 py-2 font-bold text-lg bg-green-700 hover:bg-primary transition-all text-white rounded-md shadow-sm'
           >
             Submit
           </button>

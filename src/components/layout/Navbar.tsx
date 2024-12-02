@@ -42,37 +42,35 @@ export default function Navbar() {
           {!isOpen ? 'open' : 'close'}
         </button>
       </div>
-        {isOpen && (
-          <nav className='md:hidden !m-0'>
-            <ul className='flex uppercase flex-col px-5 gap-y-3 py-10 overflow-auto text-lg font-medium '>
-              {navLinks.map(({ name, href }) => (
-                <Link
-                  href={href}
-                  key={href}
-                  className={`${
-                    pathname.includes(href)
-                      ? 'text-white bg-primary'
-                      : 'hover:bg-primary hover:text-white font-medium min-w-16'
-                  } border p-2 rounded-md shadow-sm`}
-                >
-                  {name}
-                </Link>
-              ))}
-            </ul>
-          </nav>
-        )}
+      {isOpen && (
+        <nav className='md:hidden !m-0'>
+          <ul className='flex uppercase flex-col px-5 gap-y-3 py-10 overflow-auto'>
+            {navLinks.map(({ name, href }) => (
+              <Link
+                href={href}
+                key={href}
+                className={`${
+                  pathname.includes(href)
+                    ? 'text-white bg-primary'
+                    : 'hover:text-white hover:bg-primary '
+                } border p-2 rounded-md shadow-sm font-bold text-base min-w-16`}
+              >
+                {name}
+              </Link>
+            ))}
+          </ul>
+        </nav>
+      )}
       {/* NavLinks */}
       <nav className='hidden md:block'>
-        <ul className='flex space-x-16 text-lg font-medium uppercase'>
+        <ul className='flex space-x-16 text-lg uppercase'>
           {navLinks.map(({ name, href }) => (
             <Link
               href={href}
               key={href}
-              className={
-                pathname.includes(href)
-                  ? 'text-primary'
-                  : 'hover:text-primary font-medium min-w-16'
-              }
+              className={`${
+                pathname.includes(href) ? 'text-primary' : 'hover:text-primary'
+              } font-bold min-w-16`}
             >
               {name}
             </Link>
