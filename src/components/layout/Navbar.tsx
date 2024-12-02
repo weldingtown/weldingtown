@@ -1,4 +1,4 @@
-import Logo from '@/assests/images/Brandlogo.png';
+import Logo from '@/assets/img/Brandlogo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -9,12 +9,12 @@ const navLinks = [
     href: '/',
   },
   {
-    name: 'About Us',
-    href: '#about',
+    name: 'Our Services',
+    href: '#our-services',
   },
   {
-    name: 'Our Services',
-    href: '/services',
+    name: 'About Us',
+    href: '#about',
   },
   {
     name: 'Contact Us',
@@ -25,10 +25,10 @@ const navLinks = [
 export default function Navbar() {
   const { pathname } = useRouter();
   return (
-    <header className='flex shadow-lg backdrop-blur-sm sticky top-0 bg-white/40 border-b-2 items-center space-x-16 text-lg font-medium '>
+    <header className='flex shadow-lg backdrop-blur-md sticky z-10 top-0 bg-white/50 items-center space-x-16 text-lg font-medium '>
       {/* Logo */}
       <Image
-        className='h-16 aspect-video'
+        className='h-16 max-sm:w-full  aspect-video'
         src={Logo}
         alt='Logo'
         width={300}
@@ -36,7 +36,7 @@ export default function Navbar() {
       />
 
       {/* NavLinks */}
-      <nav>
+      <nav className='hidden md:block'>
         <ul className='flex space-x-16 text-lg font-medium '>
           {navLinks.map(({ name, href }) => (
             <Link
