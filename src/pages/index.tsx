@@ -12,6 +12,7 @@ import s5 from '@/assets/img/services/05. Staircase image.jpg';
 import s6 from '@/assets/img/services/06. Fencing.jpg';
 import s7 from '@/assets/img/services/07. Tree gaurd.jpg';
 import s8 from '@/assets/img/services/08. Sheds.jpg';
+import ContactUs from '@/components/ContactUs';
 
 import MainSlider from '@/components/MainSlider';
 import { Inter } from 'next/font/google';
@@ -75,7 +76,7 @@ export default function Home() {
       <MainSlider />
 
       {/* Slogan */}
-      <section className='container mx-auto grid grid-cols-1 md:grid-cols-3 justify-center gap-10'>
+      <section className='container px-5 mx-auto grid grid-cols-1 md:grid-cols-3 justify-center gap-10'>
         {topServices.map(({ title, desc }) => (
           <div
             className='text-center bg-slate-200 border-2 shadow-md rounded-md p-10'
@@ -90,10 +91,10 @@ export default function Home() {
       {/* Doorstep Sevices */}
       <div className='flex flex-col gap-y-10'>
         <h2 className='heading'>Doorstep Services</h2>
-        <section className='container mx-auto grid grid-cols-1 md:grid-cols-3 justify-center gap-10'>
+        <section className='container px-5 mx-auto grid grid-cols-1 md:grid-cols-3 justify-center gap-10'>
           {doorstepServices.map(({ title, desc, img }) => (
             <div
-              className='w-11/12 mx-auto border-2 shadow-md rounded-md overflow-hidden cursor-pointer'
+              className='hover:bg-slate-200 transition-all mx-auto border-2 shadow-md rounded-md overflow-hidden cursor-pointer'
               key={title}
             >
               <Image
@@ -115,10 +116,10 @@ export default function Home() {
       {/* Sevices */}
       <div className='flex flex-col gap-y-10' id='our-services'>
         <h2 className='heading'>Our Services</h2>
-        <section className='container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-center gap-10'>
+        <section className='container px-5 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-center gap-10'>
           {services.map(({ title, img }) => (
             <div
-              className='w-11/12 mx-auto border-2 shadow-md rounded-md overflow-hidden cursor-pointer'
+              className='hover:bg-slate-200 transition-all mx-auto border-2 shadow-md rounded-md overflow-hidden cursor-pointer'
               key={title}
             >
               <Image
@@ -135,6 +136,9 @@ export default function Home() {
           ))}
         </section>
       </div>
+
+      {/* Contact */}
+      <ContactUs />
     </main>
   );
 }

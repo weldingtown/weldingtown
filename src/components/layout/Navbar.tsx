@@ -18,20 +18,20 @@ const navLinks = [
   },
   {
     name: 'Contact Us',
-    href: '/contact',
+    href: '#contact-us',
   },
 ];
 
 export default function Navbar() {
   const { pathname } = useRouter();
   return (
-    <header className='flex shadow-lg backdrop-blur-md sticky z-10 top-0 bg-white/50 items-center space-x-16 text-lg font-medium '>
+    <header className='grid grid-cols-1 md:grid-cols-[30%,70%] shadow-lg backdrop-blur-sm sticky z-10 top-0 bg-white/50 items-center space-x-16 text-lg font-medium'>
       {/* Logo */}
       <Image
         className='h-16 max-sm:w-full  aspect-video'
         src={Logo}
         alt='Logo'
-        width={300}
+        width={400}
         height={50}
       />
 
