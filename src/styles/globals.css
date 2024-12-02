@@ -1,6 +1,6 @@
 @tailwind base;
 .heading{
-  @apply text-center text-3xl md:text-5xl font-bold;
+  @apply text-center text-3xl md:text-5xl font-bold uppercase;
 }
 @tailwind components;
 @tailwind utilities;

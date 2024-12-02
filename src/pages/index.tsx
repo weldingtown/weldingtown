@@ -15,10 +15,7 @@ import s8 from '@/assets/img/services/08. Sheds.jpg';
 import ContactUs from '@/components/ContactUs';
 
 import MainSlider from '@/components/MainSlider';
-import { Inter } from 'next/font/google';
 import Image from 'next/image';
-
-const inter = Inter({ subsets: ['latin'] });
 
 const services = [
   { title: 'shutter', img: s1 },
@@ -71,7 +68,7 @@ const doorstepServices = [
 
 export default function Home() {
   return (
-    <main className={`${inter.className} flex flex-col gap-y-16 pb-16`}>
+    <main className='flex flex-col gap-y-16 pb-16'>
       {/* Slider */}
       <MainSlider />
 
@@ -124,7 +121,7 @@ export default function Home() {
             >
               <Image
                 src={img}
-                className='w-full aspect-square hover:scale-105 transition-all'
+                className='aspect-square hover:scale-105 transition-all'
                 width={900}
                 height={600}
                 alt={title}

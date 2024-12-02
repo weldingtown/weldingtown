@@ -44,7 +44,7 @@ export default function Navbar() {
       </div>
         {isOpen && (
           <nav className='md:hidden !m-0'>
-            <ul className='flex flex-col px-5 gap-y-3 py-10 overflow-auto text-lg font-medium '>
+            <ul className='flex uppercase flex-col px-5 gap-y-3 py-10 overflow-auto text-lg font-medium '>
               {navLinks.map(({ name, href }) => (
                 <Link
                   href={href}
@@ -63,7 +63,7 @@ export default function Navbar() {
         )}
       {/* NavLinks */}
       <nav className='hidden md:block'>
-        <ul className='flex space-x-16 text-lg font-medium '>
+        <ul className='flex space-x-16 text-lg font-medium uppercase'>
           {navLinks.map(({ name, href }) => (
             <Link
               href={href}
