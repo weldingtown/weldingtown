@@ -1,4 +1,5 @@
 import Logo from '@/assets/img/Brandlogo.png';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -38,8 +39,15 @@ export default function Navbar() {
           height={50}
         />
         {/* Toggle Button For Moblie only */}
-        <button className='md:hidden w-16' onClick={() => setIsOpen(!isOpen)}>
-          {!isOpen ? 'open' : 'close'}
+        <button
+          className='md:hidden w-16 flex justify-center items-center'
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {!isOpen ? (
+            <Bars3Icon className='w-10' />
+          ) : (
+            <XMarkIcon className='w-10' />
+          )}
         </button>
       </div>
       {isOpen && (
