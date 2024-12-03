@@ -1,7 +1,10 @@
+import postContact from '@/services/contact';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
+import ErrorComponent from './ErrorComponent';
 
-const schema = yup.object({
+const contactSchema = yup.object({
   name: yup.string().required('*required'),
   city: yup.string().required('*required'),
   phoneNumber: yup
@@ -18,9 +21,11 @@ export default function ContactUs() {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    // resolver: yupResolver(schema),
+    resolver: yupResolver(contactSchema),
   });
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = (data: any) => {
+    postContact(data);
+  };
   return (
     <div className='container px-5 flex flex-col gap-y-10' id='contact-us'>
       <h2 className='heading'>Contact Us</h2>
@@ -28,11 +33,8 @@ export default function ContactUs() {
       <center>
         <form
           className='flex max-w-md flex-col gap-x-5 gap-y-7 border shadow-md rounded-md p-10'
-          action='https://docs.google.com/forms/u/0/d/e/1FAIpQLScC00LnMiWL79ELsaIEKuBcZAgkkpdHOoRQHoBflih5IJduMQ/formResponse?edit2=2_ABaOnufRHJPcnpafib4CYRdXuX14Z6WcTu70eL-vj971CV6u9No9TcOpmrSjwNW8qA'
-          method='POST'
-          id="mG61Hd"
-          target='_blank'
-          // onSubmit={handleSubmit(onSubmit)}
+          // @ts-ignore
+          onSubmit={handleSubmit(onSubmit)}
         >
           <div className='flex text-left gap-2 flex-col relative'>
             <label htmlFor='name' className='font-bold'>
@@ -45,12 +47,11 @@ export default function ContactUs() {
               type='text'
               id='name'
               placeholder='Enter your name'
-              // {...register('name')}
-              name='entry.2005620554'
-              value={'test'}
+              {...register('name')}
             />
-            {/* <ErrorComponent message={errors.name?.message} /> */}
+            <ErrorComponent message={errors.name?.message} />
           </div>
+
           <div className='flex text-left gap-2 flex-col relative'>
             <label htmlFor='city' className='font-bold'>
               City
@@ -62,14 +63,13 @@ export default function ContactUs() {
               type='text'
               id='city'
               placeholder='Enter your city'
-              // {...register('city')}
-              name='entry.1065046570'
-              value={'test'}
+              {...register('city')}
             />
-            {/* <ErrorComponent message={errors.city?.message} /> */}
+            <ErrorComponent message={errors.city?.message} />
           </div>
+
           <div className='flex text-left gap-2 flex-col relative'>
-            <label htmlFor='contact' className='font-bold'>
+            <label htmlFor='phoneNumber' className='font-bold'>
               Phone Number
             </label>
 
@@ -78,13 +78,11 @@ export default function ContactUs() {
                 errors.phoneNumber?.message ? 'ring-2 ring-red-600' : ''
               }`}
               type='number'
-              id='contact'
+              id='phoneNumber'
               placeholder='Enter your number'
-              // {...register('phoneNumber')}
-              name='entry.1166974658'
-              value={'912389'}
+              {...register('phoneNumber')}
             />
-            {/* <ErrorComponent message={errors.phoneNumber?.message} /> */}
+            <ErrorComponent message={errors.phoneNumber?.message} />
           </div>
 
           <div className='flex text-left gap-2 flex-col relative'>
@@ -98,12 +96,10 @@ export default function ContactUs() {
               }`}
               id='message'
               placeholder='Enter your message'
-              // {...register('phoneNumber')}
-              name='entry.839337160'
-              value={'test'}
+              {...register('message')}
             ></textarea>
 
-            {/* <ErrorComponent message={errors.message?.message} /> */}
+            <ErrorComponent message={errors.message?.message} />
           </div>
 
           <button
