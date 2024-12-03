@@ -20,7 +20,7 @@ const services = [
   { title: 'shutter', img: s1 },
   { title: 'metal gates', img: s2 },
   { title: 'stainless steel gates', img: s3 },
-  { title: 'railing & grills', img: s4 },
+  { title: 'railing & grills', img: s1 },
   { title: 'staircase', img: s5 },
   { title: 'fencing', img: s6 },
   { title: 'tree guard', img: s7 },
@@ -61,7 +61,7 @@ const doorstepServices = [
   {
     title: 'Pipe and Plumbing Weld Repairs',
     desc: 'Welding services for metal pipes, plumbing systems, and pipe fittings.',
-    img: d6,
+    img: d1,
   },
 ];
 

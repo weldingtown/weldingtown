@@ -1,5 +1,6 @@
 import ErrorComponent from '@/components/ErrorComponent';
 import postContact from '@/services/contact';
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
@@ -41,7 +42,7 @@ export default function ContactUs() {
   };
   return (
     <main
-      className='py-16 container mx-auto px-5 flex flex-col gap-y-10'
+      className='py-16 container mx-auto px-5 flex flex-col gap-y-16'
       id='contact-us'
     >
       <h2 className='heading'>Contact Us</h2>
@@ -125,6 +126,20 @@ export default function ContactUs() {
           Submit
         </button>
       </form>
+
+      <h2 className='subHeading'>Have Questions? Get in Touch!</h2>
+      <section className='grid grid-cols-1 md:grid-cols-2 justify-center'>
+        <div className='border bg-slate-200 shadow-md font-semibold rounded-md flex flex-col p-5 max-w-sm w-full mx-auto'>
+          <h3 className='h3'>Have any question?</h3>
+          <PhoneIcon className='w-10 text-primary' />
+          <a href='tel:+917219844829'>+917219844829</a>
+        </div>
+        <div className='border bg-slate-200 shadow-md font-semibold rounded-md flex flex-col p-5 max-w-sm w-full mx-auto'>
+          <h3 className='h3'>Write email</h3>
+          <EnvelopeIcon className='w-10 text-primary' />
+          <a href='mailto:weldingtown22@gmail.com'>weldingtown22@gmail.com</a>
+        </div>
+      </section>
     </main>
   );
 }
