@@ -12,7 +12,6 @@ import s5 from '@/assets/img/services/05. Staircase image.jpg';
 import s6 from '@/assets/img/services/06. Fencing.jpg';
 import s7 from '@/assets/img/services/07. Tree gaurd.jpg';
 import s8 from '@/assets/img/services/08. Sheds.jpg';
-import ContactUs from '@/components/ContactUs';
 
 import MainSlider from '@/components/MainSlider';
 import Image from 'next/image';
@@ -98,7 +97,7 @@ export default function Home() {
                 src={img}
                 className='w-full aspect-video hover:scale-105 transition-all'
                 width={900}
-                height={400}
+                height={900}
                 alt={title}
               />
               <div className='p-5'>
@@ -123,7 +122,7 @@ export default function Home() {
                 src={img}
                 className='aspect-square hover:scale-105 transition-all'
                 width={900}
-                height={600}
+                height={900}
                 alt={title}
               />
               <h3 className='p-5 text-center text-xl font-bold uppercase'>
@@ -133,9 +132,6 @@ export default function Home() {
           ))}
         </section>
       </div>
-
-      {/* Contact */}
-      <ContactUs />
     </main>
   );
 }

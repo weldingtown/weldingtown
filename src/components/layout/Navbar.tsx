@@ -20,7 +20,7 @@ const navLinks = [
   },
   {
     name: 'Contact Us',
-    href: '#contact-us',
+    href: '/contact',
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Navbar() {
                 href={href}
                 key={href}
                 className={`${
-                  pathname.includes(href)
+                  pathname === href
                     ? 'text-white bg-primary'
                     : 'hover:text-white hover:bg-primary '
                 } border p-2 rounded-md shadow-sm font-bold text-base min-w-16`}
@@ -77,7 +77,7 @@ export default function Navbar() {
               href={href}
               key={href}
               className={`${
-                pathname.includes(href) ? 'text-primary' : 'hover:text-primary'
+                pathname === href ? 'text-primary' : 'hover:text-primary'
               } font-bold min-w-16`}
             >
               {name}
