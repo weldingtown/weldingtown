@@ -3,11 +3,11 @@ import d2 from '@/assets/img/doorstepServices/02.Repair and Maintenance Welding 
 import d3 from '@/assets/img/doorstepServices/03. Sheds Making imag.jpg';
 import d4 from '@/assets/img/doorstepServices/04. Automotive Welding Services img.jpg';
 import d5 from '@/assets/img/doorstepServices/05. Window and Door Frame Welding img.jpg';
-import d6 from '@/assets/img/doorstepServices/06. Pipe and Plumbing Weld Repairs img.jpg';
+// import d6 from '@/assets/img/doorstepServices/06. Pipe and Plumbing Weld Repairs img.jpg';
 import s1 from '@/assets/img/services/01. shutter img.jpg';
 import s2 from '@/assets/img/services/02. metal gates.jpg';
 import s3 from '@/assets/img/services/03. Stainless steel gate img.webp';
-import s4 from '@/assets/img/services/04. Railing and grill image.jpg';
+// import s4 from '@/assets/img/services/04. Railing and grill image.jpg';
 import s5 from '@/assets/img/services/05. Staircase image.jpg';
 import s6 from '@/assets/img/services/06. Fencing.jpg';
 import s7 from '@/assets/img/services/07. Tree gaurd.jpg';

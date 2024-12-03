@@ -128,7 +128,7 @@ export default function ContactUs() {
       </form>
 
       <h2 className='subHeading'>Have Questions? Get in Touch!</h2>
-      <section className='grid grid-cols-1 md:grid-cols-2 justify-center'>
+      <section className='grid grid-cols-1 gap-5 md:grid-cols-2 justify-center'>
         <div className='border bg-slate-200 shadow-md font-semibold rounded-md flex flex-col p-5 max-w-sm w-full mx-auto'>
           <h3 className='h3'>Have any question?</h3>
           <PhoneIcon className='w-10 text-primary' />
